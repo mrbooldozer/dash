@@ -1,11 +1,11 @@
 #!/bin/sh
 mkdir cert
 chmod 777 cert
-openssl ecparam -genkey -name secp256r1 -out cert/main.pem
-openssl ecparam -genkey -name secp256r1 -out cert/mainalert.pem
-openssl ecparam -genkey -name secp256r1 -out cert/mainspork.pem
-openssl ecparam -genkey -name secp256r1 -out cert/testnetalert.pem
-openssl ecparam -genkey -name secp256r1 -out cert/testnetspork.pem
+openssl ecparam -genkey -name secp256k1 -out cert/main.pem
+openssl ecparam -genkey -name secp256k1 -out cert/mainalert.pem
+openssl ecparam -genkey -name secp256k1 -out cert/mainspork.pem
+openssl ecparam -genkey -name secp256k1 -out cert/testnetalert.pem
+openssl ecparam -genkey -name secp256k1 -out cert/testnetspork.pem
 openssl ec -in cert/main.pem -noout -text > cert/main.text
 openssl ec -in cert/mainalert.pem -noout -text > cert/mainalert.text
 openssl ec -in cert/mainspork.pem -noout -text > cert/mainspork.text
